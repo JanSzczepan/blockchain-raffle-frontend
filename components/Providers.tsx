@@ -1,10 +1,13 @@
 'use client'
 
 import { MoralisProvider } from 'react-moralis'
+import { NotificationProvider } from 'web3uikit'
 
 function Providers({ children }: { children: React.ReactNode }) {
    return (
-      <MoralisProvider initializeOnMount={false}>{children}</MoralisProvider>
+      <MoralisProvider initializeOnMount={false}>
+         <NotificationProvider>{children}</NotificationProvider>
+      </MoralisProvider>
    )
 }
 
